@@ -159,6 +159,7 @@ var training_duration_response = {
     prompt: "<p>Press 'e' for short and 'i' for long.</p>",
     response_ends_trial: true,
     on_finish: function (data) {
+        console.log(jsPsych.timelineVariable("correct_response"))
         data.correct_response = jsPsych.timelineVariable("correct_response")
         if(data.response == data.correct_response) {data.correct = 1}
         else {data.correct = 0}
