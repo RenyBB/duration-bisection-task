@@ -42,6 +42,8 @@ To close the comment section, you have to type * followed by /. */
     }
   });
 
+jsPsych.data.addProperties({ participant_id: participant_id })
+
 // Before we do anything else, we are going to put to put together (concatenate) our stimulus list for the test block
 var full_stimulus_list = []  // Create an empty veriable wihch is going to contain all the stimuli for the test block
 var standard_stimuli_full_list = jsPsych.randomization.repeat(standard_stimulus_list, 3) // Repeat each of the standard stimuli X number of times
