@@ -42,6 +42,8 @@ To close the comment section, you have to type * followed by /. */
     }
   });
 
+// NEW - assign participants an ID and add this to the data
+let participant_id = jsPsych.randomization.randomID(10)
 jsPsych.data.addProperties({ participant_id: participant_id })
 
 // Before we do anything else, we are going to put to put together (concatenate) our stimulus list for the test block
